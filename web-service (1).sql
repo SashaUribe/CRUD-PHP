@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2022 a las 06:44:42
+-- Tiempo de generación: 13-12-2022 a las 17:56:08
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `contactos` (
-  `id` int(11) NOT NULL,
+  `id` int(100) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `telefono` varchar(15) NOT NULL,
-  `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `telefono` varchar(50) NOT NULL,
+  `email` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `contactos`
@@ -40,9 +40,28 @@ CREATE TABLE `contactos` (
 
 INSERT INTO `contactos` (`id`, `nombre`, `telefono`, `email`) VALUES
 (1, 'sasha', '988027743', 'sasha@gmail.com'),
-(2, 'uriel', '991823487', 'uriel@gmail.com'),
-(3, 'roberto', '987678546', 'roberto@gmail.com'),
-(4, 'diana', '991876543', 'diana@gmail.com');
+(2, 'roberto', '900787667', 'roberto@gmail.com'),
+(3, 'uriel', '994567334', 'uriel@gmail.com');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `contactos`
+--
+ALTER TABLE `contactos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `contactos`
+--
+ALTER TABLE `contactos`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
